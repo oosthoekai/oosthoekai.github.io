@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-kansencheck — ontdek in 2 minuten waar AI jouw bedrijf tijd oplevert | Oosthoek AI</title>
+<meta name="description" content="Beantwoord 5 korte vragen en zie direct waar de AI-kansen in jouw mkb-bedrijf liggen — van reserveringen tot administratie. Gratis, in 2 minuten.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Oosthoek AI">
+<meta name="theme-color" content="#24B784">
+<link rel="canonical" href="https://oosthoek.ai/check/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Oosthoek AI">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:url" content="https://oosthoek.ai/check/">
+<meta property="og:title" content="AI-kansencheck — waar liggen de AI-kansen in jouw bedrijf?">
+<meta property="og:description" content="5 korte vragen, direct resultaat: zie waar AI jouw bedrijf tijd kan opleveren. Gratis, in 2 minuten.">
+<meta property="og:image" content="https://oosthoek.ai/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI-kansencheck van Oosthoek AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI-kansencheck — waar liggen de AI-kansen in jouw bedrijf?">
+<meta name="twitter:description" content="5 korte vragen, direct resultaat: zie waar AI jouw bedrijf tijd kan opleveren.">
+<meta name="twitter:image" content="https://oosthoek.ai/og-image.jpg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./config.js"></script>
+<!--
+  Meten (optioneel): maak een gratis account op https://www.goatcounter.com,
+  vervang JOUW-CODE hieronder en haal de commentaartekens weg. De pagina meet
+  dan: check-gestart, check-afgerond, check-email-achtergelaten, check-cta-geklikt.
+  Zonder dit script werkt de check gewoon; er wordt dan niets gemeten.
+
+<script data-goatcounter="https://JOUW-CODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+-->
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F8F4EE; color: #2C1D1E; font-family: 'Hanken Grotesk', system-ui, sans-serif; min-height: 100vh; }
+  ::selection { background: #24B784; color: #fff; }
+  @keyframes ohRise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -.02em; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: rgba(248,244,238,.85); border-bottom: 1px solid #EAE1D4; }
+  header nav { max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #2C1D1E; }
+  .brand .mark { width: 42px; height: 42px; border-radius: 12px; overflow: hidden; display: block; box-shadow: 0 4px 12px -4px rgba(13,79,53,.5); }
+  .brand .mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .brand .name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -.01em; white-space: nowrap; }
+  .nav-cta { display: inline-flex; align-items: center; gap: 9px; background: #24B784; color: #fff; padding: 11px 20px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; box-shadow: 0 8px 18px -8px rgba(30,158,105,.7); }
+  @media (max-width: 640px) { .nav-cta { display: none; } }
+
+  main { padding: 56px 0 90px; }
+  .screen { animation: ohRise .5s ease both; }
+
+  /* Intro */
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: #DCF1E8; color: #0D4F35; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  .badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #24B784; }
+  .intro h1 { font-weight: 700; font-size: clamp(32px, 5vw, 48px); line-height: 1.07; margin: 22px 0 0; text-wrap: balance; }
+  .intro p { font-size: clamp(16.5px, 1.5vw, 19px); line-height: 1.6; color: #5e524c; margin: 20px 0 0; max-width: 560px; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #24B784; color: #fff; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 17px; font-family: inherit; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 12px 26px -10px rgba(36,183,132,.75); }
+  .btn:disabled { opacity: .55; cursor: default; box-shadow: none; }
+  .btn-ghost { background: transparent; color: #6f615b; border: none; padding: 12px 6px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+
+  /* Vragen */
+  .progress { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+  .progress .label { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #24B784; white-space: nowrap; }
+  .progress .track { flex: 1; height: 6px; border-radius: 999px; background: #EAE1D4; overflow: hidden; }
+  .progress .fill { height: 100%; border-radius: 999px; background: #24B784; transition: width .35s ease; }
+  .q-title { font-weight: 700; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; margin: 0; text-wrap: balance; }
+  .q-hint { color: #8a7d75; font-size: 15.5px; margin: 12px 0 0; }
+  .options { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+  .option { display: flex; align-items: flex-start; gap: 14px; width: 100%; text-align: left; background: #FCFAF5; border: 1.5px solid #EAE1D4; border-radius: 16px; padding: 18px 20px; font-family: inherit; font-size: 16.5px; line-height: 1.45; color: #2C1D1E; cursor: pointer; transition: border-color .15s ease, background .15s ease, transform .1s ease; }
+  .option:hover { border-color: #24B784; }
+  .option:active { transform: scale(.99); }
+  .option .box { flex: none; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #d8ccbd; margin-top: 1px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; transition: all .15s ease; }
+  .option.multi .box { border-radius: 8px; }
+  .option.selected { border-color: #24B784; background: #F0FAF5; }
+  .option.selected .box { background: #24B784; border-color: #24B784; }
+  .option.selected .box::after { content: '✓'; }
+  .open-field { display: none; margin-top: 14px; }
+  .open-field.visible { display: block; }
+  .open-field textarea { width: 100%; background: #FCFAF5; border: 1.5px solid #EAE1D4; border-radius: 14px; padding: 14px 16px; font-family: inherit; font-size: 16px; color: #2C1D1E; resize: vertical; min-height: 74px; }
+  .open-field textarea:focus { outline: none; border-color: #24B784; }
+  .q-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; gap: 14px; }
+  .max-hint { color: #8A6F8E; font-size: 14.5px; font-weight: 600; visibility: hidden; }
+  .max-hint.visible { visibility: visible; }
+
+  /* E-mail gate */
+  .gate-card { background: #402A2C; color: #f4ede9; border-radius: 28px; padding: clamp(30px, 5vw, 52px); position: relative; overflow: hidden; }
+  .gate-card .glow { position: absolute; right: -120px; top: -120px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(30,158,105,.35), rgba(30,158,105,0) 70%); pointer-events: none; }
+  .gate-card h2 { font-weight: 700; font-size: clamp(26px, 3.6vw, 36px); line-height: 1.12; margin: 0; position: relative; }
+  .gate-card p { font-size: 17px; line-height: 1.6; color: #d8ccc6; margin: 16px 0 0; position: relative; }
+  .gate-form { margin-top: 26px; position: relative; }
+  .gate-form input[type=email] { width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 13px; padding: 15px 17px; color: #fff; font-size: 16.5px; font-family: inherit; }
+  .gate-form input[type=email]::placeholder { color: rgba(244,237,233,.45); }
+  .gate-form input[type=email]:focus { outline: none; border-color: #24B784; }
+  .gate-form .btn { width: 100%; margin-top: 14px; }
+  .privacy { font-size: 13.5px; line-height: 1.55; color: #a8978f; margin: 16px 0 0; position: relative; }
+  .gate-error { color: #ffb4a8; font-size: 14px; line-height: 1.5; margin-top: 13px; text-align: center; position: relative; }
+  .gate-fallback { display: none; text-align: center; margin-top: 10px; position: relative; }
+  .gate-fallback a { color: #6FD4AC; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .gate-fallback.visible { display: block; }
+
+  /* Uitkomst */
+  .result-head .profile-chip { display: inline-flex; align-items: center; gap: 8px; background: #DCF1E8; color: #0D4F35; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700; letter-spacing: .02em; }
+  .result-head h1 { font-weight: 700; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.08; margin: 18px 0 0; }
+  .result-head p { font-size: clamp(16.5px, 1.5vw, 19px); line-height: 1.6; color: #5e524c; margin: 16px 0 0; max-width: 580px; }
+  .result-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 38px; }
+  .rcard { background: #FCFAF5; border: 1px solid #EAE1D4; border-radius: 20px; padding: 26px 28px; }
+  .rcard .top { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+  .rcard .icon { width: 44px; height: 44px; border-radius: 13px; background: #DCF1E8; display: flex; align-items: center; justify-content: center; font-size: 20px; flex: none; }
+  .rcard h3 { font-weight: 700; font-size: 20px; margin: 0; flex: 1; min-width: 140px; }
+  .level { font-size: 13px; font-weight: 700; letter-spacing: .03em; padding: 6px 13px; border-radius: 999px; white-space: nowrap; }
+  .level.hoog { background: #24B784; color: #fff; }
+  .level.gemiddeld { background: #F3E7D3; color: #7A5A2E; }
+  .level.laag { background: #EFE9E0; color: #6f615b; }
+  .dots { display: flex; gap: 5px; margin: 14px 0 0; }
+  .dots span { width: 26px; height: 6px; border-radius: 999px; background: #EAE1D4; }
+  .dots span.on { background: #24B784; }
+  .rcard p { font-size: 15.5px; line-height: 1.6; color: #5e524c; margin: 13px 0 0; }
+
+  .cta-card { background: #402A2C; color: #f4ede9; border-radius: 28px; padding: clamp(30px, 5vw, 52px); margin-top: 40px; position: relative; overflow: hidden; }
+  .cta-card .glow { position: absolute; left: -110px; bottom: -130px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(30,158,105,.3), rgba(30,158,105,0) 70%); pointer-events: none; }
+  .cta-card h2 { font-weight: 700; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; margin: 0; position: relative; }
+  .cta-card p { font-size: 16.5px; line-height: 1.6; color: #d8ccc6; margin: 16px 0 0; max-width: 520px; position: relative; }
+  .cta-card .btn { margin-top: 26px; position: relative; }
+  .restart { text-align: center; margin-top: 34px; }
+  .restart button { background: none; border: none; color: #8a7d75; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer; text-decoration: underline; }
+
+  footer { border-top: 1px solid #EAE1D4; }
+  footer .inner { max-width: 1180px; margin: 0 auto; padding: 34px 24px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between; align-items: center; color: #A38F85; font-size: 13.5px; }
+  footer a { color: #8a7d75; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="brand" href="https://oosthoek.ai/">
+      <span class="mark"><img src="assets/oosthoek-mark.png" alt="Oosthoek AI"></span>
+      <span class="name">Oosthoek AI</span>
+    </a>
+    <a class="nav-cta" href="https://oosthoek.ai/#contact">Plan een kennismaking</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap" id="app">
+    <noscript><p style="font-size:17px; line-height:1.6;">Voor de AI-kansencheck heb je JavaScript nodig. Zet JavaScript aan of mail ons op <a href="mailto:hallo@oosthoek.ai">hallo@oosthoek.ai</a> — dan doen we de check samen.</p></noscript>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>© <span id="year"></span> Oosthoek AI · <a href="https://oosthoek.ai/">oosthoek.ai</a></span>
+    <span>Geen cookies, geen trackers.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var C = window.CHECK_CONFIG;
+  var app = document.getElementById('app');
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Antwoorden: q1 = array van optie-ids (max 2), q1Open = tekst, q2–q5 = optie-id.
+  var state = { step: -1, answers: { q1: [], q1Open: '' }, failCount: 0, submitted: false };
+
+  function track(name) {
+    try {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: 'check-' + name, title: 'AI-kansencheck: ' + name, event: true });
+      }
+    } catch (e) { /* meten mag nooit de check breken */ }
+  }
+
+  function el(tag, cls, html) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (html != null) n.innerHTML = html;
+    return n;
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  // ── Scoring ────────────────────────────────────────────────────────────────
+  function computeScores() {
+    var scores = { A: 0, B: 0, C: 0, D: 0 };
+    C.questions[0].options.forEach(function (o) {
+      if (o.domain && state.answers.q1.indexOf(o.id) !== -1) scores[o.domain] += o.score;
+    });
+    C.questions.slice(1).forEach(function (q) {
+      var picked = state.answers[q.id];
+      q.options.forEach(function (o) { if (o.id === picked) scores[q.domain] += o.score; });
+    });
+    return scores;
+  }
+  function levelFor(score) {
+    for (var i = 0; i < C.levels.length; i++) if (score <= C.levels[i].max) return C.levels[i];
+    return C.levels[C.levels.length - 1];
+  }
+  function profileFor(total) {
+    for (var i = 0; i < C.profiles.length; i++) if (total <= C.profiles[i].max) return C.profiles[i];
+    return C.profiles[C.profiles.length - 1];
+  }
+
+  // ── Schermen ───────────────────────────────────────────────────────────────
+  function show(node) {
+    app.innerHTML = '';
+    app.appendChild(node);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderIntro() {
+    state.step = -1;
+    var s = el('div', 'screen intro');
+    s.appendChild(el('span', 'badge', esc(C.intro.badge)));
+    s.appendChild(el('h1', null, esc(C.intro.title)));
+    s.appendChild(el('p', null, esc(C.intro.text)));
+    var btn = el('button', 'btn', esc(C.intro.button) + ' <span style="font-size:19px; line-height:1;">→</span>');
+    btn.style.marginTop = '32px';
+    btn.onclick = function () { track('gestart'); state.step = 0; renderQuestion(); };
+    s.appendChild(btn);
+    show(s);
+  }
+
+  function renderQuestion() {
+    var q = C.questions[state.step];
+    var s = el('div', 'screen');
+
+    var prog = el('div', 'progress');
+    prog.appendChild(el('span', 'label', 'Vraag ' + (state.step + 1) + ' van ' + C.questions.length));
+    var trackBar = el('div', 'track');
+    var fill = el('div', 'fill');
+    fill.style.width = ((state.step + 1) / C.questions.length * 100) + '%';
+    trackBar.appendChild(fill);
+    prog.appendChild(trackBar);
+    s.appendChild(prog);
+
+    s.appendChild(el('h2', 'q-title', esc(q.title)));
+    if (q.hint) s.appendChild(el('p', 'q-hint', esc(q.hint)));
+
+    var opts = el('div', 'options');
+    var maxHint = el('div', 'max-hint', 'Maximaal ' + (q.maxChoices || 1) + ' antwoorden — haal er eerst één weg.');
+    var openField = null, nextBtn = null;
+
+    q.options.forEach(function (o) {
+      var b = el('button', 'option' + (q.type === 'multi' ? ' multi' : ''), '<span class="box"></span><span>' + esc(o.label) + '</span>');
+      b.type = 'button';
+      if (q.type === 'multi') {
+        if (state.answers.q1.indexOf(o.id) !== -1) b.classList.add('selected');
+        b.onclick = function () {
+          var sel = state.answers.q1;
+          var i = sel.indexOf(o.id);
+          if (i !== -1) { sel.splice(i, 1); b.classList.remove('selected'); }
+          else if (sel.length < q.maxChoices) { sel.push(o.id); b.classList.add('selected'); maxHint.classList.remove('visible'); }
+          else { maxHint.classList.add('visible'); return; }
+          if (o.open && openField) openField.classList.toggle('visible', sel.indexOf(o.id) !== -1);
+          if (nextBtn) nextBtn.disabled = sel.length === 0;
+        };
+      } else {
+        if (state.answers[q.id] === o.id) b.classList.add('selected');
+        b.onclick = function () {
+          state.answers[q.id] = o.id;
+          Array.prototype.forEach.call(opts.children, function (c) { c.classList.remove('selected'); });
+          b.classList.add('selected');
+          setTimeout(next, 260);
+        };
+      }
+      opts.appendChild(b);
+    });
+    s.appendChild(opts);
+
+    if (q.type === 'multi') {
+      openField = el('div', 'open-field' + (state.answers.q1.indexOf('1e') !== -1 ? ' visible' : ''));
+      var ta = document.createElement('textarea');
+      ta.placeholder = q.openPlaceholder || '';
+      ta.value = state.answers.q1Open;
+      ta.oninput = function () { state.answers.q1Open = ta.value; };
+      openField.appendChild(ta);
+      s.appendChild(openField);
+      s.appendChild(maxHint);
+    }
+
+    var nav = el('div', 'q-nav');
+    var back = el('button', 'btn-ghost', '← Vorige');
+    back.onclick = prev;
+    back.style.visibility = state.step === 0 ? 'hidden' : 'visible';
+    nav.appendChild(back);
+    if (q.type === 'multi') {
+      nextBtn = el('button', 'btn', 'Volgende <span style="font-size:19px; line-height:1;">→</span>');
+      nextBtn.disabled = state.answers.q1.length === 0;
+      nextBtn.onclick = next;
+      nav.appendChild(nextBtn);
+    }
+    s.appendChild(nav);
+    show(s);
+  }
+
+  function next() {
+    if (state.step < C.questions.length - 1) { state.step++; renderQuestion(); }
+    else { track('afgerond'); renderGate(); }
+  }
+  function prev() {
+    if (state.step > 0) { state.step--; renderQuestion(); }
+  }
+
+  function renderGate() {
+    var s = el('div', 'screen');
+    var back = el('button', 'btn-ghost', '← Vorige');
+    back.style.marginBottom = '18px';
+    back.onclick = function () { state.step = C.questions.length - 1; renderQuestion(); };
+    s.appendChild(back);
+
+    var card = el('div', 'gate-card');
+    card.appendChild(el('div', 'glow'));
+    card.appendChild(el('h2', null, esc(C.gate.title)));
+    card.appendChild(el('p', null, esc(C.gate.text)));
+
+    var form = el('form', 'gate-form');
+    var input = document.createElement('input');
+    input.type = 'email';
+    input.required = true;
+    input.placeholder = C.gate.placeholder;
+    input.autocomplete = 'email';
+    input.value = state.answers.email || '';
+    form.appendChild(input);
+    // Honeypot tegen bots: mensen zien dit veld niet.
+    var hp = document.createElement('input');
+    hp.type = 'text'; hp.name = 'botcheck'; hp.tabIndex = -1; hp.autocomplete = 'off';
+    hp.style.cssText = 'position:absolute; left:-9999px; opacity:0; height:0;';
+    form.appendChild(hp);
+    var btn = el('button', 'btn', esc(C.gate.button));
+    btn.type = 'submit';
+    form.appendChild(btn);
+    var err = el('div', 'gate-error');
+    err.style.display = 'none';
+    form.appendChild(err);
+    var fallback = el('div', 'gate-fallback', '<a href="#">' + esc(C.gate.fallbackLink) + '</a>');
+    fallback.querySelector('a').onclick = function (e) { e.preventDefault(); renderResult(); };
+    form.appendChild(fallback);
+    card.appendChild(form);
+    card.appendChild(el('p', 'privacy', esc(C.gate.privacy)));
+    s.appendChild(card);
+    show(s);
+
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      var email = input.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || hp.value) {
+        err.textContent = 'Vul een geldig e-mailadres in.';
+        err.style.display = 'block';
+        return;
+      }
+      state.answers.email = email;
+      btn.disabled = true;
+      btn.textContent = C.gate.sending;
+      err.style.display = 'none';
+      submitLead(email).then(function () {
+        state.submitted = true;
+        track('email-achtergelaten');
+        renderResult();
+      }).catch(function () {
+        state.failCount++;
+        btn.disabled = false;
+        btn.textContent = C.gate.button;
+        err.textContent = C.gate.error;
+        err.style.display = 'block';
+        if (state.failCount >= 2) fallback.classList.add('visible');
+      });
+    };
+  }
+
+  // ── Lead versturen via Web3Forms ───────────────────────────────────────────
+  function submitLead(email) {
+    var scores = computeScores();
+    var total = scores.A + scores.B + scores.C + scores.D;
+    var profile = profileFor(total);
+
+    var answerLines = [];
+    C.questions.forEach(function (q) {
+      var picked = q.type === 'multi' ? state.answers.q1 : [state.answers[q.id]];
+      var labels = q.options.filter(function (o) { return picked.indexOf(o.id) !== -1; })
+                            .map(function (o) { return o.label; });
+      answerLines.push(q.title + '\n→ ' + (labels.join(' | ') || '—'));
+    });
+    if (state.answers.q1Open) answerLines.push('Open antwoord ("iets anders"):\n→ ' + state.answers.q1Open);
+
+    var scoreLines = ['A','B','C','D'].map(function (d) {
+      return C.domains[d].name + ': ' + scores[d] + '/5 (' + levelFor(scores[d]).key + ')';
+    });
+
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: C.web3formsKey,
+        subject: C.web3formsSubject,
+        from_name: 'AI-kansencheck (oosthoek.ai/check)',
+        email: email,
+        botcheck: '',
+        profiel: profile.title + ' — totaalscore ' + total,
+        scores: scoreLines.join(' · '),
+        message: 'Nieuwe lead via de AI-kansencheck\n\nE-mail: ' + email +
+                 '\nProfiel: ' + profile.title + ' (totaalscore ' + total + ')' +
+                 '\n\nScores per bouwsteen:\n' + scoreLines.join('\n') +
+                 '\n\nAntwoorden:\n\n' + answerLines.join('\n\n'),
+      }),
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      if (!data.success) throw new Error(data.message || 'Web3Forms error');
+    });
+  }
+
+  // ── Uitkomst ───────────────────────────────────────────────────────────────
+  function renderResult() {
+    var scores = computeScores();
+    var total = scores.A + scores.B + scores.C + scores.D;
+    var profile = profileFor(total);
+    var order = ['A','B','C','D'].sort(function (x, y) { return scores[y] - scores[x]; });
+
+    var s = el('div', 'screen');
+    var head = el('div', 'result-head');
+    head.appendChild(el('span', 'profile-chip', 'Jouw profiel: ' + esc(profile.title)));
+    head.appendChild(el('h1', null, 'Dit zijn jouw AI-kansen'));
+    head.appendChild(el('p', null, esc(profile.intro)));
+    s.appendChild(head);
+
+    var cards = el('div', 'result-cards');
+    order.forEach(function (d) {
+      var lvl = levelFor(scores[d]);
+      var card = el('div', 'rcard');
+      var top = el('div', 'top');
+      top.appendChild(el('span', 'icon', C.domains[d].icon));
+      top.appendChild(el('h3', null, esc(C.domains[d].name)));
+      top.appendChild(el('span', 'level ' + lvl.key, esc(lvl.label)));
+      card.appendChild(top);
+      var dots = el('div', 'dots');
+      for (var i = 1; i <= 5; i++) dots.appendChild(el('span', i <= scores[d] ? 'on' : null));
+      card.appendChild(dots);
+      card.appendChild(el('p', null, esc(C.results[d][lvl.key])));
+      cards.appendChild(card);
+    });
+    s.appendChild(cards);
+
+    var cta = el('div', 'cta-card');
+    cta.appendChild(el('div', 'glow'));
+    cta.appendChild(el('h2', null, esc(C.cta.title)));
+    cta.appendChild(el('p', null, esc(C.cta.text)));
+    var link = el('a', 'btn', esc(C.cta.button) + ' <span style="font-size:19px; line-height:1;">→</span>');
+    link.href = C.cta.href;
+    link.onclick = function () { track('cta-geklikt'); };
+    cta.appendChild(link);
+    s.appendChild(cta);
+
+    var restart = el('div', 'restart');
+    var rbtn = el('button', null, 'Doe de check opnieuw');
+    rbtn.onclick = function () {
+      state = { step: -1, answers: { q1: [], q1Open: '' }, failCount: 0, submitted: false };
+      renderIntro();
+    };
+    restart.appendChild(rbtn);
+    s.appendChild(restart);
+    show(s);
+  }
+
+  renderIntro();
+})();
+</script>
+</body>
+</html>
